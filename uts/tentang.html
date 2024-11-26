@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="/latihan/images/logoaksara.png">
+	<link rel="stylesheet" type= "text/css" href="AM.css">
+	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+	<style>
+        body {
+            background-color: white;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            box-sizing: border-box;
+            font-family: roboto;
+        }
+
+        nav{
+            background:#041c24;
+            height: 80px;
+            width: 100%;
+        }
+
+        label.logo{
+            color: white;
+            font-size: 35px;
+            line-height: 80px;
+            padding: 0 100px;
+            font-weight: bold;
+        }
+
+        nav ul{
+            float: right;
+            margin-right: 20px;
+        }
+
+        nav ul li{
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 5px;
+        }
+
+        nav ul li a{
+            color: white;
+            font-size: 17px;
+            padding: 13px 19px;
+            border-radius: 3px;
+            text-transform: uppercase;
+        }
+
+        a.active,a:hover{
+            background: #00aae4;
+            transition: 2s;
+        }
+
+        .checkbtn{
+            font-size: 30px;
+            color: white;
+            float: right;
+            line-height: 80px;
+            margin-right: 40px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #check{
+            display: none;
+        }
+
+        @media (max-width: 858px){
+            .checkbtn{
+                display: block;
+            }
+            ul{
+                position: fixed;
+                width: 100%;
+                height: 100vh;
+                background: #0C1A1A;
+                top: 80px;
+                left: -100%;
+                text-align: center;
+                transition: all 0,5s;
+            }
+            nav ul li{
+                display: block;
+                margin: 50px 0;
+                line-height: 30px;
+            }
+            nav ul li a{
+                font-size: 20px;
+            }
+            a:hover, a.active{
+                background: none;
+                color: #3A0304;
+            }
+            #check:checked ~ ul{
+                left: 0;
+            }
+        }
+        
+        .quotes {
+            color: black;
+            padding: 20px;
+            margin: 40px auto; 
+            width: 80%; 
+            text-align: justify; 
+            border-style: dashed;
+        }
+
+        .title {
+            font-family: serif; 
+            font-size: 50px; 
+            margin-bottom: 15px;
+            color: 0C1A1A;
+            padding: 40px;
+        }
+
+        .quote {
+            font-family: monospace; 
+            font-size: 21px;
+            font-style: italic;
+            line-height: 1.5; 
+            max-width: 800px; 
+            margin: 0 auto;
+            border-radius: 10px;
+        }
+
+        /*alamat*/
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .ytb{
+            flex: 1;
+            min-width: 300px;
+            margin-right: 20px;
+        }
+        .info{
+            flex: 1;
+            min-width: 300px;
+        }
+        iframe{
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .info h3{
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+        .info p{
+            line-height: 1.8;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        .info .address{
+            margin-top: 10px;
+            font-size: 1rem;
+            color: black;
+        }
+
+        @media screen and (max-width:786px){
+            .container{
+                flex-direction: column;
+            }
+            .map, .info{
+                margin-bottom: 20px;
+            }
+        }
+        /*alamat*/
+
+	</style>
+
+	<title>Tentang Kami</title>
+</head>
+<body>
+
+<nav>
+    <label class="logo">Aksara Media</label>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <i class="fa fa-bars"></i>
+    </label>
+    <ul>
+        <li><a href="AM.html">Beranda</a></li>
+        <li><a href="katalog.html">Katalog</a></li>
+        <li><a class="active" href="tentang.html">Tentang Kami</a></li>
+        <li><a href="hubungi.html">Hubungi Kami</a></li>
+    </ul>
+</nav>
+<section></section>
+
+<div class="quotes">
+    <p class="title">Aksara Media</p>
+    <p class="quote">"Setiap kata memiliki kekuatan untuk mengubah cara pandang dan membawa perubahan positif."</p>
+</div>
+<br><br><br>
+
+<table style="width: 100%; border-radius: 0px; background-color: #041c24;" align="center";>
+    <tr>
+        <td style="width: 70%;">
+            <p style="text-align: justify; font-size: 17px; font-family: roboto; color: white; padding: 35px;">
+                <b>Aksara Media</b> adalah penerbit yang berdedikasi dalam menghadirkan karya-karya berkualitas untuk memenuhi kebutuhan literasi masyarakat. Berdiri dengan semangat untuk mendorong budaya membaca dan menulis, kami berkomitmen menjadi mitra terbaik bagi penulis, pembaca, dan komunitas literasi. Kami menerbitkan berbagai genre, mulai dari fiksi hingga nonfiksi, buku pelajaran, serta karya ilmiah dengan tujuan memberikan wawasan dan inspirasi bagi setiap pembaca.
+                <br><br>
+               Didukung oleh tim profesional yang berpengalaman, Aksara Media tidak hanya berperan sebagai penerbit, tetapi juga sebagai wadah bagi para penulis untuk mewujudkan ide dan imajinasinya menjadi sebuah karya nyata. Kami percaya bahwa setiap kata memiliki kekuatan untuk mengubah cara pandang dan membawa perubahan positif.
+            </p>
+        </td>
+        <td style="width: 30%;">
+            <img src="/uts/foto/logoaksara.png" style="width: 80%; height: 80%; border-radius: 30px; padding right: 20px">
+        </td>
+    </tr></table>
+<br><br>
+
+<div class="container">
+    <div class="ytb">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hmVItZC2lAA?si=pRXCUwRASHHcHO_B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+    <div class="info">
+        <h3>Kenapa Harus Penerbit Aksara Media?</h3>
+        <p style="text-align: justify;">Penerbit Deepublish meraih penghargaan sebagai Penerbit Terbaik pada Tahun 2017 yang mengikuti peraturan UU No. 4 Tahun 1990. Penerbit Deepublish memperoleh penghargaan sebagai penerbit indie terbaik di ajang Indonesia International Book Fair terkait dengan dukungan program Kepala Perpusnas.</p>
+    </div>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<footer>
+    <div class="footerContainer">
+        <div class="socialIcons">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-google-plus"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        
+    </div>
+    <div class="footerBottom">
+         <p>&copy; 2024 AKSARA MEDIA</p>
+    <p><a href="#tentang">Tentang Kami</a> | <a id="footer">Kontak</a> | <a>Kebijakan Privasi</a></p>
+    </div>
+</footer>
+
+</body>
+</html>

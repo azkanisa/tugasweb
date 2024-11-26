@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="/latihan/images/logoaksara.png">
+	<link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+	<!--css-->
+	<style>
+		body {
+			background-color: white;
+		}
+		*{
+			padding: 0;
+			margin: 0;
+			text-decoration: none;
+			list-style: none;
+			box-sizing: border-box;
+			font-family: roboto;
+		}
+
+		nav{
+			background:#041c24;
+			height: 80px;
+			width: 100%;
+		}
+
+		label.logo{
+			color: white;
+			font-size: 35px;
+			line-height: 80px;
+			padding: 0 100px;
+			font-weight: bold;
+		}
+
+		nav ul{
+			float: right;
+			margin-right: 20px;
+		}
+
+		nav ul li{
+			display: inline-block;
+			line-height: 80px;
+			margin: 0 5px;
+		}
+
+		nav ul li a{
+			color: white;
+			font-size: 17px;
+			padding: 13px 19px;
+			border-radius: 3px;
+			text-transform: uppercase;
+		}
+
+		a.active,a:hover{
+			background: #00aae4;
+			transition: 2s;
+		}
+
+		.checkbtn{
+			font-size: 30px;
+			color: white;
+			float: right;
+			line-height: 80px;
+			margin-right: 40px;
+			cursor: pointer;
+			display: none;
+		}
+
+		#check{
+			display: none;
+		}
+
+		@media (max-width: 858px){
+			.checkbtn{
+				display: block;
+			}
+			ul{
+				position: fixed;
+				width: 100%;
+				height: 100vh;
+				background: #0C1A1A;
+				top: 80px;
+				left: -100%;
+				text-align: center;
+				transition: all 0,5s;
+			}
+			nav ul li{
+				display: block;
+				margin: 50px 0;
+				line-height: 30px;
+			}
+			nav ul li a{
+				font-size: 20px;
+			}
+			a:hover, a.active{
+				background: none;
+				color: #3A0304;
+			}
+			#check:checked ~ ul{
+				left: 0;
+			}
+		}
+
+		/*terbit*/
+		.hero{
+			background-color: #041c24;
+			color: white;
+			text-align: center;
+			padding: 50px 20px;
+			border-radius: 0;
+			box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+			width: auto;
+		}
+
+		.hero h1{
+			font-size: 2rem;
+			margin-bottom: 20px;
+		}
+
+		.hero p{
+			font-size: 1rem;
+			line-height: 1.5;
+			margin-bottom: 30px;
+		}
+
+		.hero button{
+			background-color: white;
+			color: black;
+			border: none;
+			padding: 10px 20px;
+			font-size: 1rem;
+			border-radius: 25px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		.hero button:hover{
+			background-color: #00aae4;
+		}
+
+		/*alamat*/
+		.container{
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+			padding: 40px;
+			max-width: 1200px;
+			margin: auto;
+		}
+		.map{
+			flex: 1;
+			min-width: 300px;
+			margin-right: 20px;
+		}
+		.info{
+			flex: 1;
+			min-width: 300px;
+		}
+		iframe{
+			width: 100%;
+			height: 300px;
+			border: none;
+			border-radius: 10px;
+		}
+
+		.info h3{
+			font-size: 1.5rem;
+			margin-bottom: 20px;
+		}
+		.info p{
+			line-height: 1.8;
+			margin-bottom: 10px;
+			font-size: 1.1rem;
+		}
+		.info .address{
+			margin-top: 10px;
+			font-size: 1rem;
+			color: black;
+		}
+
+		@media screen and (max-width:786px){
+			.container{
+				flex-direction: column;
+			}
+			.map, .info{
+				margin-bottom: 20px;
+			}
+		}
+		/*alamat*/
+
+		.search-form, .form {
+            background-color: rgba(58, 3, 4, 0.8); 
+            border-radius: 5px;
+            padding: 20px;
+            margin: 10px auto;
+            width: 500px; 
+            text-align: center; 
+        }
+
+        .search-form label, .form label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: white;
+        }
+
+        .search-form input[type="text"], .form input[type="text"] {
+            width: 300px; /* Lebar input 100% dari form */
+            padding: 10px;
+            margin-bottom: 15px; /* Spasi bawah */
+            border: none;
+            border-radius: 3px;
+        }
+
+        .search-form input[type="text"]:focus, .form input[type="text"]:focus {
+            outline: none; 
+            border: 5px solid #3A0304; 
+        }
+
+        .submit{
+        	width: 150px;
+        	padding: 3px;
+        	font-size: 18px;
+        }
+
+        /*footer*/
+        footer{
+        	background-color: #041c24;
+        	color: white;
+        	text-align: center;
+        	font-size: large;
+        	padding: 1px 0;
+        	position: relative;
+        	bottom: 0;
+        	width: 100%;
+        	margin-top: 90px;
+        }
+        footer a{
+        	color: white;
+        	text-decoration: none;
+        }
+        footer a:hover{
+        	text-decoration: underline;
+        }
+        .footerContainer{
+        	width: 100%;
+        	padding: 70px 30px 20px;
+        }
+        .socialIcons{
+        	display: flex;
+        	justify-content: center;
+        }
+        .socialIcons a{
+        	text-decoration: none;
+        	padding: 10px;
+        	background: #041c24;
+        	margin: 10px;
+        	border-radius: 50%;
+        }
+        .socialIcons a i{
+        	font-size: 2rem;
+        	color: white;
+        	opacity: 0.9;
+        }
+        .socialIcons a:hover{
+        	background-color: black;
+        	transition: 0.5s;
+        }
+        .socialIcons a:hover i{
+        	color: white;
+        	transition: 0.5s;
+        }
+	</style>
+	<!--css end-->
+
+	<title>Aksara Media</title>
+</head>
+<body>
+
+<nav>
+	<label class="logo">AKSARA MEDIA</label>
+	<input type="checkbox" id="check">
+	<label for="check" class="checkbtn">
+		<i class="fa fa-bars"></i>
+	</label>
+	<ul>
+		<li><a href="AM.html">Beranda</a></li>
+		<li><a href="katalog.html">Katalog</a></li>
+		<li><a href="tentang.html">Tentang Kami</a></li>
+		<li><a class="active" href="hubungi.html">Hubungi Kami</a></li>
+	</ul>
+</nav>
+<section></section>
+
+
+<div class="hero">
+        <h1>Penerbit Aksara Media</h1>
+        <p>
+            Telah menerbitkan lebih dari 500 judul buku, berkomitmen menjadi mitra para penulis, akademisi, 
+            dan cendikia untuk menerbitkan buku pendidikan. Sudah siap menjadi penulis hebat? Yuk, segera 
+            kirimkan naskah terbaiknya sekarang juga. Kami akan membantu proses penerbitan ISBN hingga buku 
+            siap dicetak menjadi bentuk fisik.
+        </p>
+        <button>Terbitkan Buku</button>
+</div>
+
+
+<div class="container">
+	<div class="map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.5785574242245!2d110.412895914778!3d-7.853484994362828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a57ddebfe6d77%3A0xdb61d6d3697a5e7a!2sPenerbit%20Deepublish!5e0!3m2!1sid!2sid!4v1687636824739!5m2!1sid!2sids"></iframe>
+	</div>
+	<div class="info">
+		<h3>Alamat Kantor Aksara Media</h3>
+		<p>Silahkan mengunjungi kantor kami pada hari (senin – jumat) dan jam kerja (08.00 – 17.00) di alamat:</p>
+		<div class="address">
+			<p>Jl. Rajawali Gg. Elang 6 No.3, Drono,</p>
+			<p>Sardonoharjo, Ngaglik, Sleman, DIY 55581</p>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<form class="search-form" action="/action_page.php" style="text-align: center; width: 100%; height: 400px; background-color: #041c24;"> 
+	<h3 style="text-align: center; color: white;">Ingin Mendapatkan promo dan artikel eksklusif? Daftarkan e-mail di bawah!</h3><br><br>
+        <label for="fname">Nama Lengkap</label> 
+        <input type="text" id="fname" name="fname" value=""><br>
+        <label for="fname">Email</label>
+        <input type="text" id="fname" name="fname" value=""><br>
+        <input type="submit" value="submit" class="submit">
+	</form>
+
+  	<div class="footerContainer">
+        <div class="socialIcons">
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-google-plus"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        
+    </div>
+    <div class="footerBottom">
+         <p>&copy; 2024 AKSARA MEDIA</p>
+    <p><a href="#tentang">Tentang Kami</a> | <a id="footer">Kontak</a> | <a>Kebijakan Privasi</a></p>
+    </div>
+</footer>
+
+</body>
+</html>
